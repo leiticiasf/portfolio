@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <h1>Sociais</h1>
+        <nav>
+           <ul class="sociais">
+              <li> <a href=https://github.com/leiticiasf target="_blank" rel="noopener noreferrer" >github</a></li>
+              <li> <a href=https://www.linkedin.com/in/let%C3%ADcia-ferreira-029261269/ target="_blank" rel="noopener noreferrer" >linkedin</a></li>
+              <li> <a href=" https://wa.me/5548984944403" target="_blank" rel="noopener noreferrer">telefone</a></li>
+        </ul>
+    </nav>
+</header>
+    <div>
+        <h2>BEM VINDO!</h2>
+        <h2 class="intro">Explore and Entre em contato</h2>
+    </div>
+    <button onclick="eu()"> <strong>Sobre Mim  </strong>  </button><br><br><br>
+    <button  onclick="interesses()"><strong> Interesses  </strong></strong> </button><br><br><br>
+    <button onclick="temp()"><strong>Meus trabalhos</strong> </button><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+
+</body>
+</html>
+<script>
+    function eu(){
+        window.location.href = "eu.html"    
+    }
+    function temp(){
+        window.location.href = "temperatura.html"
+    }
+    function interesses(){
+        window.location.href = "interesses.html"
+    }
+    function ativaLetra(elemento){
+         const arrTexto = elemento.innerHTML.split('');
+         elemento.innerHTML = '';
+         arrTexto.forEach((letra, i)=>{
+            setTimeout(()=>{
+                elemento.innerHTML += letra;
+         }, 75 * i);
+        });
+    }
+
+    const titulo = document.querySelector('.intro');
+    ativaLetra(titulo);
+
+
+</script>
